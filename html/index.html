@@ -1,0 +1,246 @@
+<!-- Estructura principal de la landing page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;700;800;900&family=Roboto+Mono:wght@100;200;400;700&family=Tektur:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/index_page.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/166c59dd53.js" crossorigin="anonymous"></script>
+    <script src="../js/anime.js"></script>
+  
+    <script src="../js/main.js"></script>
+    <script src="../js/registration.js"></script>
+    <script src="../js/login.js"></script>
+
+    <script src="https://unpkg.com/i18nextify@^3.2.1" id="i18nextify" fallbacklng="en"></script>
+    
+
+
+</head>
+<body>
+    
+    <header>
+        <div>
+            <img id="logo" src="../media/logo1.png" alt="">
+            <p class="anim">D I S C I P L I N E</p>
+        </div>
+        <div id="login">
+
+            
+
+            <label id="label_enter_id">Enter your Unique ID</label>
+            <input placeholder="" id="input_login" maxlength="6" type="text" placeholder="">
+            
+            
+               
+                <span id="settings" class="material-symbols-outlined">
+                    settings
+                    </span>
+                    
+        </div>
+        <dialog id="basic_config">
+            <div id="config_data">
+
+            <h1>BASIC CONFIGURATION</h1>    
+                
+                <label for="">LANGUAGE:</label>
+                
+                    <a  class="alsk" href="?lng=es" id="spanish">spanish</a>
+                    <a  class="alsk" href="?lng=en" id="english">english</a>
+                
+
+                <label for="">LIGHT MODE:</label>
+                <select name="" id="light_mode" value="dark">
+                    
+                    <option value="dark">DARK</option>
+                    <option value="light">LIGHT</option>
+                </select>
+
+                <button class="close_this_dialog" >CLOSE</button>
+            </div>
+        </dialog>
+        
+        
+    </header>
+    <div id="user_account_options">
+            <div id="no_account">
+
+                <h1>OPTION 1 <i class="fa-solid fa-shield-halved"></i></h1>
+                <p>CREATE YOUR UNIQUE IDENTIFIER AND AVOID SAVING DATA IN ANY DATABASE. </p>
+
+                <p> <i class="fa-solid fa-angles-right"></i> Can be used for trying the app</p>
+                <p> <i class="fa-solid fa-angles-right"></i> Users that don't want to save data in databases</p>
+                <p> <i class="fa-solid fa-angles-right"></i> Data is saved in browser</p>
+            </div>
+            <div id="account">
+                <h1>OPTION 2 <i class="fa-solid fa-shield-heart"></i></h1>
+                <p>CREATE A REAL ACCOUNT, YOUR DATA WILL BE SAVED AND YOU WILL O IT </p>
+
+                <p> <i class="fa-solid fa-angles-right"></i> Users that loved the app and wants to have a greater experience</p>
+                <p> <i class="fa-solid fa-angles-right"></i> Users who prefer its data to be safely saved in a real database </p>
+                <p> <i class="fa-solid fa-angles-right"></i> Users that wants to receive the latest updates to the app </p>
+            </div>
+        </div>
+    
+        <h1 class="option_titles">Option 1 : <i class="fa-solid fa-shield-halved"></i></h1>
+    <div id="identifier">
+        <h1>Create your Unique Identifier and <b>start</b> <b>organizing</b> <b>your</b> <b>life</b></h1>
+
+        
+            <input id="id_generator" maxlength="6" type="text" value="XR998_">
+
+            <div id="create_id" hidden>Get ID</div>
+        
+        
+    </div>
+
+
+    <p id="req">ID Requirements</p>
+    <div id="requirements">
+        <p><span class="sp1"> </span> Uppercased character</p>
+        <p><span class="sp2"> </span> Lowercased character</p>
+        <p><span class="sp3"> </span> Number</p>
+        <p><span class="sp4"> </span> Special character</p>
+        <p><span class="sp5"> </span>Length = 6</p>
+            <div  class="f" id="float1"></div>
+            <div  class="f" id="float2"></div>
+    </div>
+    
+
+
+    <h1 class="option_titles">Option 2 : <i class="fa-solid fa-shield-heart"></i></h1>
+    <div id="classic_login">
+        
+        <div id="user_registration">
+            <h1>Registration</h1>
+
+            <form id="form_registration" action="../php/registration.php" method="POST">
+                <label for="">Name <i class="fa-solid fa-caret-down"></i></label>
+                <input  id="name" name="first_name" type="text">
+                <label for="">Last Name <i class="fa-solid fa-caret-down"></i></label>
+                <input  id="last_name" name="second_name" type="text">
+                <label for="">Email <i class="fa-solid fa-caret-down"></i></label>
+                <input  id="email" name="email" type="email">
+                <label for="">Password <i class="fa-solid fa-caret-down"></i></label>
+                <input  id="password" name="password" type="password" placeholder="8 DIGITS LENGTH + UPPERCASED LETTER + LOWERCASED LETTER +NUMBER (AT LEAST)">
+                
+                <label for="">Repeat password <i class="fa-solid fa-caret-down"></i></label>
+                <input id="password_confirmation" name="password_confirmation" type="password" placeholder="...">
+                <p id="warning"></p>
+                <button id="add_new_user">Create Account</button>
+                
+            </form>
+
+            
+           <div class="absolute_icon">
+            <i class="fa-solid fa-address-card "></i>
+           </div>
+
+        </div>
+
+        <dialog id="registration_dialog">
+           <div>
+
+            <p id="registration_dialog_message" ></p>
+           </div>
+        </dialog>
+        <dialog id="showrules">
+            <ul>
+                <li>Length : 8</li>
+                <li>Uppercased letter</li>
+                <li>Lowercased letter</li>
+                <li>Number</li>
+            </ul>
+        </dialog>
+
+        <div id="user_login">
+            <h1>LOG - IN</h1>
+            <form action="">
+                <label for="">Email <i class="fa-solid fa-correct"></i></label>
+            <input class="not_submit" type="text" id="email_login">
+            <label for="">Password <i class="fa-solid fa-caret-down"></i></label>
+            <input class="not_submit" type="password" id="password_login">
+            <p id="warning_login"></p>
+            <input id="user_try_login" type="submit" value="LOG - IN">
+            </form>
+
+            <div class="absolute_icon">
+                <i class="fa-solid fa-fingerprint "></i>
+            </div>
+        </div>
+        <dialog id="login_dialog">
+           <div>
+            <p>Welcome again </p>
+            <div class="box_1"></div>
+            <div class="box_2"></div>
+            <p>You are being redirected ...</p>
+           </div>
+
+        </dialog>
+    </div>
+
+    <footer>
+        <div id="social_icons">
+            <a ><img src="../media/social_icons/instagram.png" alt=""></a>
+            <a ><img src="../media/social_icons/twitter.png" href=""></a>
+            <a ><img src="../media/social_icons/linkedin.png" alt=""></a>
+            <a href="https://www.youtube.com/@DISCIPLINE-APP"><img src="../media/social_icons/youtube.png" alt=""></a>
+            <a ><img src="../media/social_icons/reddit.png" alt=""></a>
+            </div>
+        <div>
+            <p>Help Center</p>
+            <p>Work With Us</p>
+        </div>
+        <div>
+            <p>Partners</p>
+            <p>About Discipline</p>
+            <p>Press Center</p>
+        </div>
+        <div>
+            <p>Terms of Use</p>
+            <p>Privacy Policy</p>
+            <p>Cookie Policy</p>
+            <p>Copyright</p>
+            
+        </div>
+
+        
+        
+    </footer>
+    <div id="delete_my_data">
+        <div id="step1">
+            Delete All My Data
+        </div>
+        <div id="step2">
+
+            <span class=" a1 material-symbols-outlined">
+                    database
+            </span>
+            <span class=" a2 material-symbols-outlined">
+                    minimize
+            </span>
+            <span class="a3 material-symbols-outlined">
+                    minimize
+            </span>
+            <span class="a4 material-symbols-outlined">
+                    minimize
+            </span>
+            <span class="a5 material-symbols-outlined">
+                    delete
+            </span>
+        </div>
+    </div>
+
+    <div id="id_already_created">ID in use</div>
+
+    
+
+   
+</body>
+</html>

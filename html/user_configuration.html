@@ -1,0 +1,349 @@
+<!-- Estructura principal de la página de configuración de usuario-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration  </title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;700;800;900&family=Roboto+Mono:wght@100;200;400;700&family=Tektur:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/user_configuration.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="../js/anime.js"></script>
+    <script src="https://kit.fontawesome.com/166c59dd53.js" crossorigin="anonymous"></script>
+    <script src="../js/user_configuration.js"></script>
+
+    <script src="https://unpkg.com/i18nextify@^3.2.1" id="i18nextify" fallbacklng="en"></script>
+
+    <noscript>
+        <style>
+            body{
+              display: none;
+            }
+            
+          </style>
+    </noscript>
+</head>
+<body>
+
+<div id="navbar">
+
+    <div id="logo">
+        <img class="cursor_pointer"src="../media/logo1.png" alt="">
+        <p class="cursor_pointer">DISCIPLINE</p>
+        
+    </div>
+
+    
+   
+    <p class="cursor_pointer">HELP</p>
+
+    <span class="border-right" ></span>
+
+    <div id="idd" class="cursor_pointer">User</div>
+
+
+</div>
+    
+<div id="main_content">
+    <div id="options">
+
+        <div id="profile_img"><i class="fa-solid fa-address-card"></i></div>
+ 
+        <p id="user_name"></p>
+ 
+ 
+        <ul id="menu">
+         <li class="selected submenu_it cursor_pointer">OVERVIEW</li>
+         <li class="submenu_it settings cursor_pointer">USER SETTINGS</li>
+         <li class="submenu_it plans">PLANS</li> 
+         
+        </ul>
+ </div>
+ 
+ 
+ <div id="actions">
+ 
+     <div  id="overview">
+ 
+         <h1>OVERVIEW</h1>
+
+
+         <div id="your_information">
+
+            <div class="info_item">
+                <p class="labels">NAME </p>
+                <i class="fa-solid fa-left-right"></i>
+                <p id="info_name"></p>
+            </div>
+            <div class="info_item">
+                <p class="labels">LAST NAME </p>
+                <i class="fa-solid fa-left-right"></i>
+                <p id="info_last_name"></p>
+            </div>
+            <div class="info_item">
+                <p class="labels">E-MAIL </p>
+                <i class="fa-solid fa-left-right"></i>
+                <p id="info_email"></p>
+            </div>
+            <div class="info_item">
+                <p class="labels">PASSWORD </p>
+                <i class="fa-solid fa-left-right"></i>
+                <p id="password">***...</p>
+            </div>
+
+            
+            
+            <a href="#" id="open_settings">UPDATE MY DATA</a>
+         </div>
+
+
+         <p>Here you can see how your data is saved in database</p>
+     </div>
+
+     <div id="user_settings">
+        <h1>USER SETTINGS</h1>
+
+
+        
+
+
+
+        <div id="basic_update">
+
+            <h2 class="h2">Update your data</h2>
+            <div class="item_to_update">
+                <label for="">NAME</label>
+                <input class="input user_name" type="text">
+            </div>
+            <div class="item_to_update">
+                <label for="">LAST NAME</label>
+                <input class="input last_name" type="text" id="user_last-name">
+            </div>
+            <div class="item_to_update">
+                <label for="">EMAIL</label>
+                <input class="input user_email" type="text" id="user_email">
+            </div>
+
+            <a id="btn_update_data" href="#">UPDATE DATA</a>
+            
+        </div>
+
+        <hr>
+        <div id="password_update">
+
+            
+            <h2 class="h2">Password update</h2>
+            <div class="item_to_update">
+                <label for="">NEW PASSWORD</label>
+                <input class="input new_password" type="password">
+            </div>
+            <div class="item_to_update">
+                <label for="">REPEAT PASSWORD</label> 
+                <input class="input repeat_password" type="password">
+            </div>
+            <div class="item_to_update">
+                <label for="">PREVIOUS PASSWORD</label>
+                <input class="input previous_password"  type="password">
+            </div>
+
+            <a id="btn_update_password" href="#">UPDATE DATA</a>
+        </div>
+
+        <hr>
+
+
+        <div id="delete_account">
+            <h2 class="h2">Delete My Account</h2>
+
+            
+           <div id="del">
+            <p>If you delete your account, all your data will be removed from our database. </p>
+           </div>
+           <div id="btn_del">
+            <a  id="btn_delete_account" href="#">DELETE ACCOUNT</a>
+           </div>
+
+        </div>
+
+
+
+     </div> <!-- END OF USER SETTINGS -->
+
+     <!-- PLANS -->
+      <div id="plans">
+        <h1>Plans</h1>
+
+
+        <div id="different_plans">
+
+            <div class="plan" id="basic">
+
+                <div class="plan_icon"></div>
+
+                <h1 class="title">Current</h1>
+                <ul>
+                    
+                    <li><i class="fa-brands fa-servicestack"></i> Standard task creation</li>
+                    <li><i class="fa-brands fa-servicestack"></i> Exportation mode</li>
+                    <li><i class="fa-brands fa-servicestack"></i> Available in English</li>
+                    <li><i class="fa-brands fa-servicestack"></i> Available in Spanish</li>
+                    <li><i class="fa-brands fa-servicestack"></i> Two modes available (DARK/LIGHT)</li>
+                    <li><i class="fa-brands fa-servicestack"></i> FREE</li>
+                    
+                </ul>
+
+                <button class="current">CURRENT</button>
+            </div>
+
+            <div class="plan" id="advanced">
+
+                <div class="plan_icon"></div>
+
+                <h1 class="title">Advanced</h1>
+                <ul>
+                    
+                    <li><i class="fa-brands fa-servicestack"></i> Specialized task creation</li>
+                    <li><i class="fa-brands fa-servicestack"></i> Exportation Mode</li>
+                    <li><i class="fa-brands fa-servicestack"></i> Importation Mode</li>
+                    <li><i class="fa-brands fa-servicestack"></i> Available in English</li>
+                    <li><i class="fa-brands fa-servicestack"></i> Available in Spanish</li>
+                    <li><i class="fa-brands fa-servicestack"></i> Available in German</li>
+                    <li><i class="fa-brands fa-servicestack"></i> Total dashboard configuration</li>
+                    <li><i class="fa-brands fa-servicestack"></i> 2.29 € / m</li>
+                </ul>
+
+                <button class="upgrade" >PRO</button>
+            </div>
+
+            <div class="plan" id="premium">
+
+                <div class="plan_icon"></div>
+
+                <h1 class="title">Premium</h1>
+                <ul>
+                    
+                    <li><i class="fa-solid fa-cookie-bite"></i> Specialized task creation</li>
+                    <li><i class="fa-solid fa-cookie-bite"></i> Exportation Mode</li>
+                    <li><i class="fa-solid fa-cookie-bite"></i> Importation Mode</li>
+                    <li><i class="fa-solid fa-cookie-bite"></i> Team mode available</li>
+                    <li><i class="fa-solid fa-cookie-bite"></i> 20 users available</li>
+                    <li><i class="fa-solid fa-cookie-bite"></i> Available in more than 20 languages</li>
+                    <li><i class="fa-solid fa-cookie-bite"></i> Total dashboard configuration</li>
+                    <li><i class="fa-solid fa-cookie-bite"></i> 4.56 € / m</li>
+                </ul>
+
+                <button class="upgrade" >PREMIUM</button>
+            </div>
+
+            <div class="plan" id="enterprise">
+
+                <div class="plan_icon"></div>
+
+                <h1 class="title">Enterprise</h1>
+                <ul>
+                    
+                    <li><i class="fa-solid fa-staff-snake"></i> 100 % configurable task creation</li>
+                    <li><i class="fa-solid fa-staff-snake"></i> Exportation Mode</li>
+                    <li><i class="fa-solid fa-staff-snake"></i> Importation Mode</li>
+                    <li><i class="fa-solid fa-staff-snake"></i> Team PRO available</li>
+                    <li><i class="fa-solid fa-staff-snake"></i> Unlimited users</li>
+                    <li><i class="fa-solid fa-staff-snake"></i> Available in more than 20 languages</li>
+                    
+                    <li><i class="fa-solid fa-staff-snake"></i> 25.32 € / m</li>
+                </ul>
+
+                <button class="upgrade" >ENTERPRISE</button>
+            </div>
+        </div>
+
+     </div> 
+
+
+     <!-- ACCOUNT SETTINGS -->
+
+     <div id="account_settings">
+
+            <h1 class="h2">ACCOUNT SETTINGS</h1>
+
+
+            <div id="language">
+                <label for="#">Language</label>
+                <i class="fa-solid fa-left-right"></i>
+                    <div>
+                        <p class="spanish">SPANISH</p>
+                        <div id="selected_lang_animation"></div>
+                    </div>
+                    <p class="english">ENGLISH</p>
+                   
+                
+            </div>
+
+            <div id="theme">
+
+                <label for="">Screen Mode</label>
+                <i class="fa-solid fa-left-right"></i>
+                <p id="dark">DARK</p>
+                <p id="light">LIGHT</p>
+                
+            </div>
+
+            <div id="fontsize">
+                <label for="">Font Size</label>
+                <i class="fa-solid fa-left-right"></i>
+                <input  min="8" max="12" step="2" value="10" type="range">
+            </div>
+            <div id="fontfamily">
+                <label for="">Font Family</label>
+                <i class="fa-solid fa-left-right"></i>
+                <p>Tektur (default)</p>
+                <p>Arial</p>
+                <p>Raleway</p>
+                <p>Verdana</p>
+                <p>Sans-serif</p>
+                
+            </div>
+            <div id="fontsize">
+                <label for="">Font Size</label>
+
+                <input type="range">
+            </div>
+     </div>
+
+     
+ </div> <!-- end of actions -->
+ 
+</div>
+
+<dialog id="user_configuration">
+        
+    <div id="user_configuration_box">
+       <!--  <div class="config_items" ><p>Update Photo</p><i class="fa-solid fa-id-card"></i></div> -->
+        <div class="config_items account_settings" ><p>Account Settings</p> <i class="fa-solid fa-gears"></i></div>
+        <div class="config_items logout" ><p>Log Out</p> <i class="fa-solid fa-right-from-bracket"></i></div>
+        <div id="lngs">
+            <span id="en">EN</span>
+            <span id="es">ES</span>
+        </div>
+
+        <i class="fa-solid fa-xmark close_configuration"></i>
+    </div>
+
+ </dialog>
+
+
+
+ <dialog id="updated_user">
+
+    <div>
+        <h1>YOUR DATA HAS BEEN UPDATED !</h1>
+
+        <i class="fa-solid fa-check"></i>
+    </div>
+ </dialog>
+
+     
+</body>
+</html>

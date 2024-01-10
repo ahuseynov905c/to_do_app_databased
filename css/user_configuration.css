@@ -1,0 +1,537 @@
+/* Dará estilo a la página de configuración del usuario */
+:root{
+
+    --green: #0fbf0f;
+    --red: #ff0052;
+    --basic: #1c1c1c;
+    --white: rgb(221,221,221)
+}
+
+*::selection{
+    background-color: rgb(190, 190, 190);
+}
+
+body{
+    font-family: 'Tektur', sans-serif;
+     background:url("../media/index_html_background.svg");
+    background-size: cover;
+    background-repeat: repeat;
+    background-color: rgb(238, 238, 238);
+    
+    
+    
+    
+    min-height: 100vh;
+    height: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+    
+    
+    
+    }
+
+#navbar{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.cursor_pointer{
+    user-select: none;
+    cursor: pointer;
+}
+#navbar #idd{
+    user-select: none;
+    cursor: pointer;
+}
+
+#navbar #logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.border-right{
+    height: 80%;
+    
+    
+    background-color: rgb(0, 0, 0);
+    width: 1px;
+    height: 80%;
+    
+
+}
+#navbar img{
+    width: 30px;
+}
+
+
+/* DIALOG */
+#user_configuration{
+    width: 200px;
+    height:auto;
+    border: none;
+    outline: none;
+    
+    height: 160px;
+    position: relative;
+    right: 0;
+    
+    margin-right: 10px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+#user_configuration div{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    
+}
+#user_configuration_box div{
+    background-color: rgb(39, 39, 39);
+    width: 90%;
+    padding: 15px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#user_configuration_box div:hover{
+    background-color: rgb(39, 39, 39);
+}
+
+.close_configuration{
+    font-size: 2rem;
+}
+.close_configuration:hover{
+    transform: scale(0.8);
+    transition: 300ms;
+}
+.close_configuration:not(:hover){
+    transition: 200ms;
+}
+
+
+
+/* MENU FOR UPDATING ELEMENTS */
+
+#options{
+    width: 25%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-right: 1px solid black;
+}
+
+
+#options #profile_img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+    #user_name{
+        padding-top: 20px;
+    }
+    #profile_img i{
+        color: white;
+        font-size: 1.5rem;
+    }
+
+#options ul{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    gap: 5px;
+}
+#options ul li{
+    border: 1px solid black;
+    padding: 10px;
+    width: 90%;
+    cursor: pointer;
+}
+#options ul li:hover{
+    background-color: grey;
+    color: white;
+}
+
+
+
+/* ACTIONS */
+#main_content{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    
+}
+
+
+#actions{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+
+
+/* OVERVIEW */
+        #overview, #user_settings, #plans{
+            background-color: white;
+            width: 80%;
+            height: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            justify-content: space-around;
+
+            
+        }
+       
+        #user_settings,#account_settings,#plans{
+            display: none;
+        }
+
+
+        #overview h1, #user_settings h1, #plans h1, #account_settings h1{
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        #overview a{
+            float: right;
+            padding-top: 10px;
+        }
+
+            #your_information{
+                width: 300px;
+                height: 250px;
+                border: 1px solid black;
+                padding: 20px;
+            }
+            .info_item{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+                border-bottom: 1px solid grey ;
+                padding: 20px;
+            }
+
+
+/* USER_SETTINGS  */
+
+    
+    #basic_update{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    #basic_update a, #password_update a{
+        align-self: flex-end;
+    }
+   
+/* PLANS */
+
+#different_plans{
+
+    display: flex;
+    justify-content: space-around;  gap: 5px;
+}
+
+.plan:nth-of-type(1){
+    background-color: #484848;
+}
+.plan:nth-of-type(2){
+    background-color: #343434;
+}
+.plan:nth-of-type(3){
+    background-color: #1a1a1a;
+}
+.plan:nth-of-type(4){
+    background-color: black;
+}
+.plan{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-end-end-radius: 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.plan ul{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+.plan .title{
+    border: 1px solid rgb(255, 255, 255) ;
+    text-align: center;
+    padding: 20px;
+}
+
+/* PLANS BUTTONS */
+.upgrade{
+    background-color: rgb(79, 113, 79);
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    position: relative;
+    
+}
+.upgrade::after{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: 2px solid;
+    width: 100%;
+    height: 100%;
+}
+.upgrade:hover::after{
+    top: 0;
+    left: 0;
+    transition: 200ms;
+}
+.upgrade:not(:hover)::after{
+    transition: 200ms;
+}
+.current{
+    background-color: rgb(185, 232, 217);
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.plan{
+    height: 400px;
+}
+
+
+/* ACCOUNT CONFIGURATION*/
+
+#account_settings{
+    height: 500px;
+    width: 90%;
+    background-color: white;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#account_settings div{
+    display: flex;
+    gap: 10px;
+}
+#account_settings div label{
+    background-color: black;
+    padding: 5px;
+    color: white;
+    border: none;
+}
+
+.spanish, .english{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.spanish::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    
+    top: 0;
+    left: 0;
+    
+}
+
+
+
+
+
+
+/* PASSWORD UPDATE */
+
+    
+   
+    #password_update{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+   
+         
+    /* Pre-established */
+    .h2{
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    .input{
+        border-radius: 5px;
+        border: 1px solid black;
+        padding: 5px 5px;
+    }
+    .item_to_update{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    hr{
+        width: 70%;
+        
+        background-color: black;
+        align-self: flex-start;
+    }
+
+
+
+    /* DELETE ACCOUNT */
+    #delete_account{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        
+    }
+    #del{
+        display: flex;
+        justify-content: space-between;
+    }
+    #btn_del{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .confirm_button{
+        border: none;
+        background-color: black;
+        color: white;
+        
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 80px;
+    }
+    .yes{
+        background-color: var(--green);
+        color: white;
+        
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+
+    /* MENU LOGIC */
+
+    .selected{
+        background-color: grey;
+        color: white;
+    }
+
+
+    /* DIALOG UPDATED USER */
+
+    #updated_user{
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        width: 800px;
+        height: 400px;
+        
+    }
+    #updated_user div{
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        
+    }
+    #account_settings{
+        display: none;
+    }
+    #updated_user div i{
+
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        background-color: white;
+        border: 1px solid var(--green);
+        color: var(--green);
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    @media (max-width:1000px){
+        #user_settings,#account_settings,#plans{
+            display: none;
+        }
+
+        #options{
+            width: 100%;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            height: 50vh;
+        }
+        #main_content{
+            flex-direction: column;
+            height: auto;
+        }
+        #account_settings{
+            display: none;
+        }
+        #different_plans{
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: auto;
+        }
+        #confirmation_input{
+            flex-direction: column;
+            gap: 20px;
+
+        }
+        
+    }
+
+    

@@ -1,0 +1,1364 @@
+/* Dará estilos a ambas páginas principales del usuario (ya sea con registro o sin registro) */
+
+
+:root{
+
+
+    --red: #ff0052;
+    --basic: #1c1c1c;
+    --white: rgb(221,221,221);
+    --blue: #A2CFE2;
+    --green: #96D38C;
+                    --yellow: #F8E71C;
+                    --orange: #F4A259;
+                    --critical : #E76F51;
+    
+    }
+    body{
+    font-family: 'Tektur', sans-serif;
+     background:url("../media/index_html_background.svg");
+    background-size: cover;
+    background-repeat: repeat;
+    color: rgb(221, 221, 221);
+    
+    display: flex;
+    flex-direction: column;
+    
+    
+    min-height: 100vh;
+    height: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    position: relative;
+    overflow-y: scroll;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+    
+    
+    
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+        background-color: black;
+    }::-webkit-scrollbar-thumb {
+        background-color: rgb(221, 221, 221);
+        border-radius: 20px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #555;
+    }
+    input{
+        font-family: "Tektur";
+        
+    }
+
+    
+            #control_bar{
+                width: 100%;
+                height: 50px;
+                background-color: black;
+                color: white;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:var(--white);
+                z-index: 100;
+                position: relative;
+                
+                
+            }
+            #control_bar_content{
+                width: 90%;
+                
+                display: flex;
+                height: 50px;
+                justify-content: space-between;
+                align-items: center;
+            }
+           
+            
+            #control_bar_content #logo{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                color:var(--white)
+            }
+            .after_entry{
+                opacity: 0;
+            }
+                #logo p span{
+                    display: inline-block;
+                    user-select: none;
+                }
+            #control_bar_content img{
+                width: 30px;
+            }
+           
+            #menu_handler{
+                color: var(--white);
+                user-select: none;
+                cursor: pointer;
+            }
+    
+    
+    
+            #main_settings{
+                
+                background-color: #692069;
+                position: absolute;
+                right: 0;
+                top: -50px;
+                height: 100px;
+                display: flex;
+               
+                justify-content: space-around;
+                align-items: center;
+                box-sizing: border-box;
+                width: 100%;
+                
+                padding: 10px;
+                gap: 10px;
+                z-index: 10;
+                
+                
+            }
+            /* Main settings -> occupy around 150px of height */
+            #main_settings div{
+                border: 2px solid black;
+                width: 90%;
+                flex-grow:1;
+                position: relative;
+                
+                
+            }
+            #idd:hover{
+                cursor: pointer;
+            }
+            .ms{
+                border: 2px solid transparent;
+            }
+                .settingsGroupName{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 10px;
+                    overflow: hidden;
+                }
+                .settingsGroupName {
+                    padding-left: 10px;
+                    background-color: #1c1c1c;
+                    
+    
+                }
+                .settingsGroupName span{
+                    font-size: 1.2rem;
+                    background-color: black;
+                    width: 30px;
+                    height: 30px;
+                    border-end-start-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                }
+    
+                #button_container{
+                    width: 100%;
+                    
+                    position: relative;
+                    left: 0;
+                    height: 100px;
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                  
+                    
+                    
+    
+                    
+                    
+                    
+                }
+                #button_container #underline_animation{
+                    position: absolute;
+                    left:0;
+                    bottom: -195px;
+                    width: 100%;
+                    height: 200px;
+                    background-color: var(--white);
+                }
+                #button_container span{
+                    font-size: 2rem;
+                    display: inline-block;
+                    color: #ddd;
+                    
+                }
+    
+                #main_content{
+                    display: flex;
+                    gap: 50px;
+                    align-items: start;
+                    margin-bottom: 20px;
+                }
+                #filters{
+                    background-color: rgba(179, 177, 177, 0.193);
+                    
+                    height: 200vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 20px;
+                    position: relative;
+                    border-end-end-radius: 10px;
+                    padding-bottom: 20px;
+                    width: 25%;
+                    
+    
+                    
+    
+                }
+                #filters p{
+                    display: flex;
+                    align-items: center;
+                    justify-content: start;
+                    text-align: start;
+                    gap: 10px;
+                    width: 90%;
+                     padding: 20px 10px;
+                     user-select: none;
+                }
+                #filters span{
+                    display: inline-block;
+                }
+                #filters p:hover{
+                    background-color: rgba(46, 46, 46, 0.374);
+                }
+    
+                .active{
+                    background-color: rgba(46, 46, 46, 0.527);
+                }
+                #filters input[type="search"]{
+                        padding: 10px;
+                        outline: none;
+                }
+    
+               #filters #gen_pdf{
+                background-color: transparent;
+                border: 2px solid white;
+                border-radius: 100%;
+                color: white;
+                padding: 20px;
+                font-size: 3rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: inset 0px 0px 35px 0px rgba(255,255,255,0.2);
+                
+                
+               }
+               #gen_pdf i{
+                color: rgba(255,255,255,0.8);
+               }
+
+               #filters #gen_pdf:hover{
+                transition: 400ms;
+
+                border-end-end-radius: 0;
+               }
+               
+               #filters #gen_pdf:not(:hover){
+                transition: 400ms;
+               }
+                   
+                #button_container button{
+                   width: 100%;
+                   height: 100%;
+                   border: none;
+                   border-radius: none;
+                   font-size: 2rem;
+                   font-family:"Tektur";
+                   background-color: rgba(179, 177, 177, 0.193)
+    
+                }
+                #button_container button:hover{
+                    transition: 200ms;
+                    background-color: rgba(195, 195, 195, 0.193);
+                    cursor: pointer;
+                }
+                #button_container button:not(:hover){
+                    transition: 200ms;
+                    
+                }
+    
+    
+                /* PRINCIPAL DIV ->WHERE ALL INPUTS GO */
+                #create_task{
+                    width: 100%;
+                    height: auto;
+                    position: absolute;
+                    top: 150px;
+                    left:50% ;
+                    transform: translate(-50%);
+                    background-color: rgb(69, 62, 62);
+                   display: none;
+                   z-index: 1000;
+                   border-bottom: 2px solid #ddd;
+                    
+                    
+    
+                }
+    
+    
+                /* HERE WE STYLE THE TITLE AND THE DESCRIPTION */
+                    #title_and_description{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        padding: 10px;
+                        
+                        width: 90%;
+                        margin:auto;
+                    }
+                    #title_and_description span:first-child{
+                            align-self: end;
+                            color: var(--white);
+                            font-size: 1.2rem;
+                    }
+                        #title_and_description input{
+                            background-color: transparent;
+                            letter-spacing: 1px;
+                            outline: none;
+                            border: none;
+                            color: var(--white);
+                            border-bottom: 2px solid transparent;
+                            
+                        }
+    
+                        #title_and_description input:nth-of-type(1){
+                            font-size: 1.4rem;
+    
+                        }
+                        
+                    /* END OF TITLE AND DESCRIPTION STYLING */
+                    
+                    
+                    /* Headers is a class that groups All BOXES inside of the CREATE-TASK DIV */
+                    .headers{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-around;
+                        height: 200px;
+                        width: 45%;
+                        margin: auto;
+                        background-color: #1c1c1c;
+                        border-radius: 10px;
+                        margin:10px;
+                        border: 2px solid transparent;
+                    }
+    
+                    /* Refers to the TITLE OF EACH  */
+                    .title_and_span{
+                        display: flex;
+                        
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    
+    
+                    }
+                    .title_and_span span{
+                        font-size: 1.2rem;
+                    }
+                    .headers .title{
+                        border: 1px solid rgba(255, 255, 255, 0.193);
+                        padding: 5px 5px;
+                    }
+                    .headers ul{
+                        padding: 0 10px;
+                        
+                        height: 50px;
+                        display: flex;
+                        align-items: center;
+                    }
+    
+    
+                    /* Styling of SUBTASKS */
+                    
+                    #subtasks{
+                        
+                        padding-top: 20px;
+                        height: 200px;
+                        justify-content: flex-start;
+                        overflow-y: scroll;
+                    }
+                    #subtasks .inpCover{
+                        width: 90%;
+                        display: flex;
+                        justify-content: center;
+                        position: relative;
+                    }
+                    #subtasks .inpCover::before{
+                        content:"STEP";
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        height: 100%;
+                        width: auto;
+                        padding: 0 10px;
+                        color: rgb(221, 221, 221);
+                        background-color: #171616;
+                        font-size: 0.8rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+    
+                     .inpCover input{
+                        resize: none;
+                        width: 90%;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid rgba(255, 255, 255, 0.193);
+                        outline: none;
+                        color: rgb(221, 221, 221);
+                        margin: 10px 0;
+                    }
+                    #subtasks button{
+                        margin: 10px 0;
+                        padding: 10px 0;
+                        background-color: #171616;
+                        color:rgb(221, 221, 221);
+                    }
+                        
+    
+    
+                    /* STYLING OF THE Family Selector  */
+                    #type{
+                       
+                        overflow-y: scroll;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        
+                        
+                    }
+                        #type ul{
+                        
+                            display: flex;
+                            width: 90%;
+                            height: 50%;
+                            justify-content: space-around;
+                            flex-wrap: wrap;
+                            gap: 2px;
+                        
+                        }
+                        #type ul li{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100px;
+                            height: 40px;
+                            border: 1px solid #A2CFE2;
+                            
+                            padding: 5px;
+                            
+                        }
+                        #type ul li:hover{
+                            background-color: #a2cfe259;
+                        }
+                        #type ul li input{
+                            width: 100px;
+                            height: 40px;
+                            border: none;
+                            outline: none;
+                            background-color: transparent;
+                            color: rgb(221, 221, 221);
+                            font-size: 1rem;
+    
+                        }
+                        #type ul li input::placeholder{
+                            color: rgb(221,221,221);
+                            font-size: 1rem;
+                            font-family: 'Tektur';
+                        }
+    /*-------------------5 DIFFERENT FLAGS FOR IMPORTANCE */
+                    #flags ul li{
+                        padding: 5px;
+                               text-align: center;
+                    }
+                        #flags ul li:hover{
+                        background-color: #0f0e0e;
+                        }
+    
+                    
+                    #flags ul li:nth-of-type(1){
+                        border-bottom: 2px solid #A2CFE2;
+                    }
+                        #flags ul li:nth-of-type(1){
+                        color: #A2CFE2;
+                        }
+    
+    
+    
+                    #flags ul li:nth-of-type(2){
+                        border-bottom: 2px solid #96D38C
+                    }
+                        #flags ul li:nth-of-type(2){
+                        color: #96D38C;
+                        }
+                        
+                    #flags ul li:nth-of-type(3){
+                    border-bottom: 2px solid #F8E71C;
+    
+                   
+                    }
+                        #flags ul li:nth-of-type(3){
+                        color: #F8E71C;
+                        }
+    
+                    #flags ul li:nth-of-type(4){
+                    border-bottom: 2px solid #F4A259;
+                    }
+                        #flags ul li:nth-of-type(4){
+                        color: #F4A259;
+                        }
+    
+    
+                    #flags ul li:nth-of-type(5){
+                    border-bottom: 2px solid #E76F51;
+                    }
+                        #flags ul li:nth-of-type(5){
+                        color: #E76F51;
+                        }
+    
+    /*-------------------5 DIFFERENT FLAGS FOR IMPORTANCE */
+    
+                    
+    
+    
+    
+    
+                    /* Hashtags */
+                    #hashtags ul, #date ul{
+                        gap:10px;
+                    }
+                    #hashtags input{
+                        background-color: transparent;
+                        border: 1px solid #A2CFE2;
+                        width: 90%;
+                        outline: none;
+                        color: rgb(221, 221, 221);
+                        text-transform: uppercase;
+                        height: 50px;
+                        font-size: 1.2rem;
+                        padding-left: 5px;
+                    }   
+                       
+    
+    
+                    /* DATE INPUT */
+                    #date input{
+                        background-color: transparent;
+                        border: 1px solid rgba(255, 255, 255, 0.193);
+                        width: 90%;
+                        outline: none;
+                        color: rgb(221, 221, 221);
+                        width: 100px;
+                        border: none;
+                    }
+    
+    
+                    /* Container of buttons */
+                    #create_cancel{
+                        width: 90%;
+                        margin: auto;
+                        
+                        display: flex;
+                        justify-content: flex-end;
+                        
+                        padding: 10px;
+                        gap: 10px;
+                    }
+                    #create_cancel button{
+                        width: 150px;
+                        font-size: 1rem;
+                        padding: 10px 0;
+                        border-radius: 10px;
+                        border: none;
+                    }
+                        /* BUTTON CANCEL */
+                        #create_cancel button:nth-of-type(1){
+                            background-color: black;
+                            color: white;
+                        }
+                        #create_cancel button:nth-of-type(1):hover{
+                            background-color: #1f1e1e;
+                        }
+    
+                        /* BUTTON OK */
+                        #create_cancel button:nth-of-type(2){
+                            background-color: #96D38C;
+                            color: white;
+                        }
+                        #create_cancel button:nth-of-type(2):hover{
+                            background-color: #70a168;
+                        }
+    
+    
+    
+    
+    
+                    /* CONTAINER THAT WILL HAVE ALL THE TASKS OF THE USER */
+    
+                    
+                        #all_tasks{
+                            
+                            width: 80%;
+                            
+                            height: auto;
+                            align-self: start;
+                            
+                            
+                            top: 0;
+                            margin-top: 40px;
+                            margin-left: 50px;
+                            padding-bottom: 10px;
+                            border-radius: 10px;
+                            align-self: start;
+                            
+                            min-height: 100vh;
+                            height:auto;
+                            position: relative;
+                           
+                        }
+                            #all_tasks_header{
+                                height: 40px;
+                                display: flex;
+                                width: 90%;
+                                margin: auto;
+                                border-bottom: 1px solid #ddd;
+                                justify-content: space-between;
+                                
+                            }
+                                #all_tasks_header h1{
+                                
+                                padding: 10px 10px;
+                            }
+                                #refresh{
+                                    font-size: 1rem;
+                                }
+                                #refresh:hover{
+                                    color: #96D38C;
+                                    
+                                }
+                                
+                            #helpers{
+                                display: flex;
+                                margin-left: 80px;
+                                justify-content: space-around;
+                                padding: 10px 0;
+                                width: 70%;
+                                justify-content: flex-end;
+                                gap: 50px;
+                                cursor: help;
+                                
+                            }
+
+
+
+    
+                           
+                            
+    
+                            #all_tasks_in,#not_started_tasks, #completed_tasks, #pending_tasks {
+                                height: 90%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                
+                            }
+
+                            #stats{
+                                display: flex;
+
+                                background-color: #555;
+                                width: 250px;
+                                height: 100%;
+                                top: 150px;
+                                border-end-start-radius: 10px;
+                                position: absolute;
+                                right: -230px;
+                               
+                            }
+                            #stats span{
+                                height: 100%;
+                                
+                                background-color: rgb(55, 55, 55);
+                                display: flex;
+                                align-items: center;
+                                border-end-start-radius: 10px;
+                            }
+                                #stats span:hover{
+                                    background-color: rgb(70,70,70);
+                                    cursor: pointer;
+                                }
+                            #stats #data{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-around;
+                                align-items: center;
+                                
+                            }
+                                #data p{
+                                    width: 100%;
+                                    text-align: center;
+                                }
+                                
+                                .stat{
+                                    padding: 40px 0;
+                                    color: black;
+                                    
+                                }
+                                
+                                .res_total_not_started{
+                                    background-color:var(--blue) ;
+                                }
+                                .res_total_pending{
+                                    background-color:var(--yellow) ;
+                                }
+                                .res_total_completed{
+                                    background-color:var(--green) ;
+                                }
+                                .res_total_expired{
+                                    background-color:var(--red) ;
+                                }
+                                
+                            
+    
+                            .hereiam{
+                                color:red
+                            }
+                            .task{
+                                width: 80%;
+                                background-color: #292929;
+                                display: flex;
+                                height: 100px;
+                                border-radius: 10px;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin: auto;
+                                margin-top: 10px;
+                                flex-wrap: wrap;
+                                overflow: hidden;
+                                border: 3px solid transparent;
+                                padding: 20px;
+                                position: relative;
+                                
+                            }
+                            
+                             .title, .description, .flag, .task_type{
+                                padding: 5px;
+                                border-radius: 5px;
+                            }
+                            .task div:nth-of-type(1){
+                                padding: 0 10px;
+                            }
+                            .task div:last-child{
+                                width: 100%;
+                                height: 20px;
+                                background-color: #323232;
+                                
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                flex-basis: 100%;
+                                gap: 20px;
+                            }
+                            .task button{
+                                border: none;
+                                background-color: #96D38C;
+                                color: white;
+                                font-weight: bold;
+                            }
+                            .task button:hover{
+                                background-color: #70a168;
+                            }
+                            .task ul{
+                                 flex-basis: 100%;
+                               /* display: flex;
+                                flex-direction: column; */
+                                background-color: #212121;
+                                padding-left: 100px;
+                                /* gap: 20px;     */
+                                padding: 10px 40px;
+                                display: none; /* EDITING */
+                            }
+    
+                            .task ul h1{
+                                border-bottom: 1px solid #ddd;
+                                padding-bottom: 10px;
+                            }
+                            .task ul li{
+                                padding-left: 40px;
+                                padding-top: 10px;
+                                list-style: inside;
+                                
+                            }
+                            .task ul p{
+                                padding-top: 10px;
+                                font-weight: bold;
+                            }
+                            
+    
+                            .task .config {
+                                
+                                background-color: rgb(59, 59, 59);
+                                padding: 10px 20px !important;
+                                border-start-start-radius: 10px;
+                                border-end-start-radius: 10px;
+                                border-start-end-radius: 10px;
+                                margin-right: 5px;
+                                display: flex;
+                                align-items: center;
+                            }
+                                .config:hover{
+                                    background-color:rgb(48, 48, 48); ;
+                                }
+                                .show_all_task_content:hover{
+                                    color: var(--green);
+                                }
+                                .remove_task:hover{
+                                    color:var(--red)
+                                }
+                                .task_done{
+                                    accent-color: var(--green);
+                                }
+                                .complete_box{
+                                    display: flex;
+                                    align-items: end;
+                                    
+                                }
+                                
+                                .completed{
+                                    accent-color: var(--yellow);
+                                    
+                                }
+                                
+                            
+                            .date_and_done{
+                                border-radius: 20px 0 0 20px;
+                            }
+                            .date_and_done p.dd_state{
+                                padding: 0 10px;
+                                background-color: #1c1c1c;
+                                padding: 5px;
+                            }
+
+                                .dd_state{
+                                    justify-self: start;
+                                }
+                            
+                            
+    
+                            
+    
+                            /* Allows me to position the tasks FLEX or GRID */
+                            #tasks_positioning{
+                                
+                                width: 80px;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-around;
+                                
+                            }
+                            #tasks_positioning span{
+                                margin: 0 2px;
+                                
+                                font-size: 1rem;
+                            }
+                            #tasks_positioning span:hover{
+                                color: white;
+                                cursor: pointer;
+                            }
+    
+                            #is_empty{
+                                
+                                margin: auto;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin: 50px;
+                                flex-direction: column;
+                                gap: 10px;
+                                justify-content: space-between;
+                                height: 100px;
+                                
+                            }
+
+
+        #show_by_date{
+            width: 60%;
+            
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            
+            padding: 50px ;
+            margin: auto;
+            
+        }
+
+        #month{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            background-color: #12121246;
+            width: 100%;
+            gap: 10px;
+            padding: 10px;
+        }
+        .typemonth{
+            padding: 5px;
+            border-radius: 10px;
+        }
+        #month div{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        #tasks_by_month{
+            width: 100%;
+            height: auto;
+            
+        }
+            .mini_taskNON,.mini_taskCOM,.mini_taskSTART, .mini_taskEXP{
+                border-radius: 100%;
+                width: 20px;
+                height: 20px;
+                border-radius: 10px;
+            }
+            .mt_titleNON, .mt_titleCOM, .mt_titleSTART, .mt_titleEXP{
+                color: black;
+                font-weight: normal;
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+                height: 30px;
+                padding: 10px 10px;
+                display: flex;
+                align-items: center;
+                margin: 2px;
+                
+            }
+            .mini_taskNON, .mt_titleNON{
+                background-color: var(--blue);
+            }
+            .mini_taskSTART, .mt_titleSTART{
+                background-color: var(--yellow)
+            }
+            .mini_taskCOM, .mt_titleCOM{
+                background-color: var(--green)
+            }
+            .mini_taskEXP, .mt_titleEXP{
+                background-color: var(--red);
+            }
+
+        
+        #type_of_filter{
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #1f1e1e;
+            padding: 20px;
+            height: auto;
+            width: 80%;
+            border-radius: 10px;
+        }
+        #type_of_filter .filter input{
+            accent-color: var(--green);
+            width: 20px;
+            height: 20px;
+        }
+        #type_of_filter p{
+           
+            margin: auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        
+            max-height: 50px;
+        }
+        #type_of_filter #faq{
+            position: absolute;
+            right: 50px;
+            padding: 8px 10px;
+            border-radius: 100%;
+            background-color: black;
+            cursor: pointer;
+
+        }
+        #dialog_faq{
+            position: absolute;
+            top: 35%;
+            left: 25%;
+            width: 500px;
+            height: 350px;
+            border-radius: 20px;
+            border: none;
+        }
+        #faq_rules{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        #faq_rules span{
+            font-weight: bold;
+        }
+        #lngs{
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #lngs span:hover{
+            color: #555;
+        }
+            
+        
+        #specific_filters{
+            width: 90%;
+            min-height: 400px;
+            height: auto;
+            margin: auto;
+           
+        }
+
+        #deleted_message{
+            
+            position: absolute;
+            top: 50px;
+            left: -140px;
+            border: 2px solid #ff0052;
+            width: 100px;
+            height: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding:10px ;
+        }
+        
+
+        #tooltip{
+            width: 100px;
+            height: 20px;
+            background-color: rgba(23, 23, 23, 0.534);
+            color: white;
+            position: absolute;
+            display: none;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        #bottom_shadow{
+            width: 100%;
+            height: 20px;
+            position: fixed;
+            bottom: 0;
+            background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 31%, rgba(0,212,255,0) 100%);
+        }
+
+        /* SPECIFIC FOR DASHBOARD_REGISTERED */
+        #task_inserted, #dialog_deleted_task{
+            
+            width: 400px;
+            height: 300px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            
+        }
+        #task_inserted div, #dialog_deleted_task div{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+        }
+        #task_inserted i, #dialog_deleted_task i{
+            font-size: 6rem;
+            color: rgb(68, 94, 64);
+            
+        }
+        #task_inserted i.fa-triangle-exclamation{
+            color: rgb(156, 76, 76);
+            
+        }
+
+
+        #date ul{
+            display: flex;
+            flex-direction: column;
+        }
+        #open_date_input{
+            font-size: 3rem;
+        }
+
+        .history{
+            width: 65%;
+            height: 20px;
+            display: flex;
+            
+            margin: auto;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgb(56, 56, 56);
+            padding: 5px 0;
+            
+        }
+        .history >div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            
+        }
+        
+            .not-started{
+            width: 10px;
+            height: 10px;
+            background-color: #A2CFE2;
+            border-radius: 20px;
+            border-end-end-radius: 0;
+        }
+
+            .pending{
+                width: 10px;
+                height: 10px;
+                background-color: #F8E71C;
+                border-radius: 20px;
+                border-end-end-radius: 0;
+            }
+            .completedd{
+                width: 10px;
+                height: 10px;
+                background-color: #96D38C;
+                border-radius: 20px;
+                border-end-end-radius: 0;
+            }
+            .expired{
+                width: 10px;
+                height: 10px;
+                background-color: #ff0052;
+                border-radius: 20px;
+                border-end-end-radius: 0;
+            }
+           
+            .hide_help:hover{
+                color: white;
+            }
+            
+
+            /* user configuration */
+
+            #user_configuration{
+                width: 200px;
+                height:auto;
+                border: none;
+                outline: none;
+                
+                height: 160px;
+                position: relative;
+                right: 0;
+                
+                margin-right: 10px;
+                margin-top: 50px;
+                overflow: hidden;
+            }
+            #user_configuration div{
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2px;
+                
+            }
+            #user_configuration_box div{
+                background-color: rgb(39, 39, 39);
+                width: 90%;
+                padding: 15px;
+                color: white;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            #user_configuration_box div:hover{
+                background-color: rgb(39, 39, 39);
+            }
+
+            .close_configuration{
+                font-size: 2rem;
+            }
+            .close_configuration:hover{
+                transform: scale(0.8);
+                transition: 300ms;
+            }
+            .close_configuration:not(:hover){
+                transition: 200ms;
+            }
+
+
+
+            /* CHARTS */
+            #charts_and_progress{
+                width: 100%;
+                max-height: 400px;
+                background-color: rgb(39, 39, 39);
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                flex-wrap: wrap;
+                
+            }
+            #myChart{
+                width: 200px;
+                overflow: hidden;
+            
+            }
+            
+           .progress{
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            
+           }
+            #total_subtasks, #total_hashtags{
+                
+                width: 300px;
+                height: 300px;
+                border-radius: 100%;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                font-size: 4rem;
+                
+
+            }
+            #total_subtasks{
+                background: rgb(28,28,28);
+                background: radial-gradient(circle, rgba(28,28,28,1) 54%, rgba(255,0,82,1) 96%);
+            }
+            #total_hashtags{
+                background: rgb(28,28,28);
+                background: radial-gradient(circle, rgba(28,28,28,1) 54%, rgba(150,211,140,1) 96%);
+            }
+
+           
+            input[type=radio],input[type=checkbox], .show_all_task_content, .remove_task{
+                cursor: pointer;
+            }
+
+        
+        
+            #confirm_delete{
+                padding: 100px;
+                border-radius: 20px;
+                text-align: center;
+            }
+            #confirm_delete *{
+                margin: 10px;
+            }
+        #confirm_delete #cancel{
+            padding: 10px 30px;
+            background-color: rgb(172, 44, 44);
+            color: white;
+            border: none;
+        }
+        #confirm_delete #confirm{
+            padding: 10px 30px;
+            background-color: #96D38C;
+            color: white;
+            border: none;
+
+        }
+        #confirm_delete button:hover{
+            opacity: 0.9;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        @media(max-width:900px){
+
+            #main_content{
+                flex-direction: column;
+            }
+            #filters{
+                width: 100%;
+                height: 1100px;
+            }
+            
+            #create_task div{
+                width: 90%;
+            }
+            #grid_view,#flex_view{
+                display: none;
+            }
+            #menu_handler{
+                display: none;
+            }
+           
+            .history{
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 50px;
+            }
+            .task{
+                min-height: 200px;
+            }
+
+            
+            .mt_titleNON, .mt_titleCOM, .mt_titleSTART{
+                color: black;
+                font-weight: normal;
+                font-size: 1.2rem;
+                letter-spacing: 2px;
+                height: 50px;
+                padding: 25px 10px;
+                display: flex;
+                align-items: center;
+                margin: 2px;
+                
+            }
+
+            
+        }

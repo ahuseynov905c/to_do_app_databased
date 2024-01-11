@@ -30,4 +30,7 @@ Es decir, tendremos dos carpetas, to_do_app_databased y locales. La segunda nos 
 ERRORES EN APLICACIÓN: 1.0
 
 - Ciertos elementos no serán traducidos correctamente debido a la naturaleza asíncrona de la aplicación. Por defecto aparecerán en inglés (lenguaje nativo de la aplicación).
-  
+
+
+La aplicación funciona en un entorno local con el uso de XAMPP
+Adjunto las sentencias SQL para generar la base de datos con PHPMYADMIN

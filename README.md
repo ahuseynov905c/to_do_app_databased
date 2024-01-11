@@ -4,7 +4,7 @@ Código del proyecto de fin de grado.
 
 La estructura del proyecto debe ser la siguiente para el correcto funcionamiento: 
 
- -> locales  (deberá extraerse y ponerse al mismo nivel que la carpeta to_do_app_databased
+ -> locales  (deberá extraerse y ponerse al mismo nivel que la carpeta to_do_app_databased en HTDOCS)
     -> ES
         translation.json
     -> EN
